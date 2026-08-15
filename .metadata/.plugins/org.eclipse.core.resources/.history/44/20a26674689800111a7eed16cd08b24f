@@ -1,0 +1,46 @@
+package com.example.jenkindevops.entity;
+
+import java.util.List;
+
+import jakarta.persistence.ElementCollection;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "resturant")
+public class Resturant {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int resturntId;
+	private String resturntName;
+	@ElementCollection
+	private List<String> items;
+
+	public int getResturntId() {
+		return resturntId;
+	}
+
+	public void setResturntId(int resturntId) {
+		this.resturntId = resturntId;
+	}
+
+	public String getResturntName() {
+		return resturntName;
+	}
+
+	public void setResturntName(String resturntName) {
+		this.resturntName = resturntName;
+	}
+
+	public List<String> getItems() {
+		return items;
+	}
+
+	public void setItems(List<String> items) {
+		this.items = items;
+	}
+
+}

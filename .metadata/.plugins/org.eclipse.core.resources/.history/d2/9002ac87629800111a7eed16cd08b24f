@@ -1,0 +1,9 @@
+package com.example.jenkindevops.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.example.jenkindevops.entity.Resturant;
+
+public interface ResturantRepository extends JpaRepository<Resturant, Integer>{
+
+}

@@ -1,0 +1,7 @@
+package com.example.jenkindevops.service;
+
+public interface ResturantService {
+
+	Object findByRestaurantName(String name);
+
+}

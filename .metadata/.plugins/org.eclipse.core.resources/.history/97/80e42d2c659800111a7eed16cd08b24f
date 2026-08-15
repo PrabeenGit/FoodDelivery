@@ -1,0 +1,12 @@
+spring.application.name=jenkindevops
+
+# PostgreSQL Database Configuration
+spring.datasource.url=myservicedb.cpy4acy8em7o.eu-north-1.rds.amazonaws.com/postgres
+spring.datasource.username=postgres
+spring.datasource.password=Jamshedpur
+spring.datasource.driver-class-name=org.postgresql.Driver
+
+# JPA / Hibernate Configuration
+spring.jpa.hibernate.ddl-auto=create  
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect

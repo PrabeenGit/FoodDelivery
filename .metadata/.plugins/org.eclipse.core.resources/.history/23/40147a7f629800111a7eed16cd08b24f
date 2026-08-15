@@ -1,0 +1,5 @@
+package com.example.jenkindevops.serviceimpl;
+
+public class ResturantServiceImpl {
+
+}
