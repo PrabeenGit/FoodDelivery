@@ -1,0 +1,37 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: jenkindockerkbsdeployment
+spec:
+ replicas: 2
+ strategy: 
+    type: Recreate
+ selector: 
+   matchLabels: 
+     app: jenkindockerkbs
+ template:
+  metadata:
+   name: mavenwebapppod
+   labels:
+     app: jenkindockerkbs	 
+  spec: 
+    containers:
+    - name: jenkindockerkbscontainer
+      image: prabeen/jenkindockerkbs:latest 
+      imagePullPolicy: Always
+      ports:
+      - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+ name: mavenwebappsvc
+spec:
+  type: LoadBalancer
+  selector:
+   app: jenkindockerkbs
+  ports:
+   - port: 80
+     targetPort: 8080
+...
