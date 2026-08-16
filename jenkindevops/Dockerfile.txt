@@ -1,4 +1,4 @@
 FROM tomcat:latest
-MAINTAINER Prabeen <prabeenbrahma@gmail.com>
+MAINTAINER prabeen <prabeenbrahma@gmail.com>
 EXPOSE 8080
 COPY target/jenkindevops-4.0.7.war /usr/local/tomcat/webapps/jenkindevops-4.0.7.war
